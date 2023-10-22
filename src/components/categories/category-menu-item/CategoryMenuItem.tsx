@@ -8,6 +8,7 @@ interface CategoryMenuItemProps {
   icon?: string;
   title: string;
   caret?: boolean;
+  children: any;
 }
 
 const CategoryMenuItem: React.FC<CategoryMenuItemProps> = ({

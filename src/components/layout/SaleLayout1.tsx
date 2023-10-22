@@ -9,6 +9,7 @@ import StyledAppLayout from "./AppLayoutStyle";
 
 type Props = {
   title?: string;
+  children: any;
 };
 
 const SaleLayout1: React.FC<Props> = ({

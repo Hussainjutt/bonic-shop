@@ -11,6 +11,7 @@ type AccordionHeaderProps = {
   showIcon?: boolean;
   open?: boolean;
   [key: string]: unknown;
+  children: any;
 };
 
 const AccordionHeader: React.FC<

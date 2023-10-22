@@ -9,6 +9,7 @@ export interface SidenavProps {
   scroll?: boolean;
   handle: React.ReactElement;
   toggleSidenav?: () => void;
+  children: any;
 }
 
 const Sidenav: React.FC<SidenavProps> = ({
@@ -44,21 +45,26 @@ const Sidenav: React.FC<SidenavProps> = ({
 
     return (
       <Fragment>
-        {createPortal(
-          <StyledSidenav
-            open={sidenavOpen}
-            width={width}
-            position={position}
-            scroll={scroll}
-            onClick={toggleSidenav || handleToggleSidenav}
-          >
-            <div className="sidenav-content" onClick={handleModalContentClick}>
-              {children}
-            </div>
-          </StyledSidenav>,
-          sidenav
-        )}
-
+        {
+          createPortal(
+            <StyledSidenav
+              open={sidenavOpen}
+              width={width}
+              position={position}
+              scroll={scroll}
+              onClick={toggleSidenav || handleToggleSidenav}
+            >
+              <div
+                className="sidenav-content"
+                onClick={handleModalContentClick}
+              >
+                {children}
+              </div>
+            </StyledSidenav>,
+            sidenav
+          ) as React.ReactNode
+        }{" "}
+        {/* Type casting here */}
         {handle &&
           cloneElement(handle, {
             className: handle.props?.className + " cursor-pointer",

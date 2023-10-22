@@ -9,6 +9,7 @@ import StyledAppLayout from "./AppLayoutStyle";
 type Props = {
   title?: string;
   navbar?: React.ReactChild;
+  children: any;
 };
 
 const GroceryLayout: React.FC<Props> = ({

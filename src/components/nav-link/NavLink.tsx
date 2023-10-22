@@ -10,6 +10,7 @@ export interface NavLinkProps extends SpaceProps, ColorProps {
   as?: string;
   style?: CSSProperties;
   className?: string;
+  children: any;
 }
 
 const NavLink: React.FC<

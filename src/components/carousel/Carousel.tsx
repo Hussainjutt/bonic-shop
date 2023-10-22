@@ -39,6 +39,7 @@ export interface CarouselProps {
   rightButtonClass?: string;
   leftButtonStyle?: CSSProperties;
   rightButtonStyle?: CSSProperties;
+  children: any;
 }
 
 const Carousel: React.FC<CarouselProps> = ({
@@ -105,7 +106,6 @@ const Carousel: React.FC<CarouselProps> = ({
           <IconButton
             className={`arrow-button left-arrow-class ${arrowButtonClass} ${leftButtonClass}`}
             as={ButtonBack}
-            variant="contained"
             color={arrowButtonColor}
             style={leftButtonStyle || {}}
           >
@@ -116,7 +116,6 @@ const Carousel: React.FC<CarouselProps> = ({
           <IconButton
             className={`arrow-button right-arrow-class ${arrowButtonClass} ${rightButtonClass}`}
             as={ButtonNext}
-            variant="contained"
             color={arrowButtonColor}
             style={rightButtonStyle || {}}
           >

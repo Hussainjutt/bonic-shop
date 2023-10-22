@@ -7,7 +7,7 @@ import Navbar from "../navbar/Navbar";
 import Stepper from "../stepper/Stepper";
 import AppLayout from "./AppLayout";
 
-const CheckoutNavLayout: React.FC = ({ children }) => {
+const CheckoutNavLayout: React.FC = ({ children }: any) => {
   const [selectedStep, setSelectedStep] = useState(0);
 
   const router = useRouter();

@@ -6,7 +6,7 @@ import Navbar from "../navbar/Navbar";
 import CustomerDashboardNavigation from "./CustomerDashboardNavigation";
 import AppLayout from "./AppLayout";
 
-const CustomerDashboardLayout: React.FC = ({ children }) => (
+const CustomerDashboardLayout: React.FC = ({ children }: { children: any }) => (
   <AppLayout navbar={<Navbar />}>
     <Container my="2rem">
       <Grid container spacing={6}>

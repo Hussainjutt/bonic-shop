@@ -10,6 +10,7 @@ import StyledAppLayout from "./AppLayoutStyle";
 type Props = {
   title?: string;
   navbar?: React.ReactChild;
+  children: any;
 };
 
 const AppLayout: React.FC<Props> = ({
